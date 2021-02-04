@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.thing.avatar.operation.model";
+option java_outer_classname = "ThingAvatarOperationModelProtos";
+
+message Operation {
+    string key = 1;
+    string value = 2;
+}
+
+enum Status {
+    SUCCESS = 0;
+    INTERNAL_ERROR = 1;
+    INVALID_JSON_STRING = 2;
+    ILLEGAL_KEY = 3;
+    UNSUPPORT_VALUE_TYPE = 4;
+    MISMATCHED_VERSION = 5;
+    NESTED_DEPTH_OVERSIZE = 6;
+    ATTRIBUTE_OVERSIZE = 7;
+    STORAGE_OVERSIZE = 8;
+    NON_EXIST_INNER_KEY = 9;
+    ATTRIBUTE_VALUE_OVERSIZE = 10;
+    NOT_FOUND = 11;
+}
+
+message GetAvatarRequest {
+    string reqId = 1;
+}
+
+message GetAvatarReply {
+    string reqId = 1;
+    Status status = 2;
+    string avatar = 3;
+}
+
+message UpdateAvatarRequest {
+    string reqId = 1;
+    repeated Operation operations = 2;
+    int32 version = 3;
+}
+
+message UpdateAvatarReply {
+    string reqId = 1;
+    Status status = 2;
+}
+
+message Delta {
+    repeated Operation operations = 1;
+    int32 version = 2;
+}
