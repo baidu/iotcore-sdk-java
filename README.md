@@ -1,7 +1,8 @@
 # IoTCore sdk
-IoT Core设备管理java sdk，包含：
+IoT Core java sdk，包含：
 - 影子设备侧和控制侧sdk：隐藏了mqtt协议以及网络细节，方便用户使用物联网核心套件影子相关功能，支持多种认证方式（包含签名，ssl等），并提供上报信息，下发指令以及监听指令变化等功能。
-    
+
+## 帮助文档
 * 详细使用文档参见wiki [SDK使用指南](https://github.com/baidu/iotcore-sdk-java/wiki)
 * 支持的java版本：1.8及以上
 
