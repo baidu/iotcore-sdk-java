@@ -1,11 +1,11 @@
-# iot-device java sdk
+# IoTCore sdk
 IoT Core设备管理java sdk，包含：
 - 影子设备侧和控制侧sdk：隐藏了mqtt协议以及网络细节，方便用户使用物联网核心套件影子相关功能，支持多种认证方式（包含签名，ssl等），并提供上报信息，下发指令以及监听指令变化等功能。
     
-详细使用文档参见见wiki [SDK使用指南](http://wiki.baidu.com/pages/viewpage.action?pageId=1333531386)
+详细使用文档参见见wiki [SDK使用指南](https://github.com/baidu/iotcore-sdk-java/wiki)
     
 ## 快速开始
-| 其他场景参考 [示例代码](https://console.cloud.baidu-int.com/devops/icode/repos/baidu/bce-iot/iot-device-sdk-java/tree/master:iot-device-sdk-avatar-samples/src/main/java/com/baidu/iot/device/sdk/avatar/samples)
+| 其他场景参考 [示例代码](https://github.com/baidu/iotcore-sdk-java/tree/main/iot-device-sdk-avatar-samples/src/main/java/com/baidu/iot/device/sdk/avatar/samples)
 ### 添加maven依赖
 ```$xslt
 <dependency>
