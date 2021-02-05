@@ -5,9 +5,32 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.baidu.iot</groupId>
-    <artifactId>iot-device-sdk-java</artifactId>
+    <artifactId>iotcore-sdk-java</artifactId>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <name>iotcore-sdk-java</name>
+    <description>Java SDK for baidu IoT Core service</description>
+    <url>https://github.com/baidu/iotcore-sdk-java</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>zhangxiao18</name>
+            <email>zhangxiao18@baidu.com</email>
+            <organization>baidu</organization>
+            <organizationUrl>https://www.baidu.com/</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/baidu/iotcore-sdk-java.git</connection>
+        <developerConnection>scm:git:git@github.com:baidu/iotcore-sdk-java.git</developerConnection>
+        <url>https://github.com/baidu/iotcore-sdk-java.git</url>
+    </scm>
+
     <modules>
         <module>iot-device-sdk-avatar-common</module>
         <module>iot-device-sdk-avatar-deviceside</module>
@@ -19,6 +42,8 @@
     <properties>
         <jmockit.version>1.48</jmockit.version>
         <java.version>1.8</java.version>
+        <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <source.encoding>UTF-8</source.encoding>
     </properties>
 
@@ -63,31 +88,66 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>baidu-nexus</id>
-            <url>http://maven.scm.baidu.com:8081/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
     <distributionManagement>
-        <repository>
-            <id>Baidu_Local</id>
-            <url>http://maven.baidu-int.com/nexus/content/repositories/Baidu_Local</url>
-        </repository>
         <snapshotRepository>
-            <id>Baidu_Local_Snapshots</id>
-            <url>http://maven.baidu-int.com/nexus/content/repositories/Baidu_Local_Snapshots</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <profiles>
+        <profile>
+            <id>sonatype-oss-release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven-javadoc-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>jacoco</id>
             <activation>
