@@ -186,34 +186,6 @@ public class AvatarVersionHolderTest {
                 });
     }
 
-    @Test
-    public void testCompleteAfterClose() throws InterruptedException {
-        CompletableFuture<GetAvatarReply> future = new CompletableFuture<>();
-
-        new Expectations() {{
-            getAvatarMethod.call((GetAvatarRequest) any);
-            result = Single.fromCompletionStage(future);
-        }};
-        AtomicBoolean failure = new AtomicBoolean(false);
-        avatarVersionHolder.triggerReload()
-                .subscribe(new DisposableCompletableObserver() {
-                    @Override
-                    public void onComplete() {
-
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-                        failure.set(true);
-                        Assert.assertTrue(e instanceof ReloadAvatarVersionFailedException);
-                    }
-                });
-
-        Thread.sleep(200);
-        Assert.assertTrue(failure.get());
-        avatarVersionHolder.close().blockingAwait();
-    }
-
     private static GetAvatarReply genGetReply(AvatarId avatarId, int reportedVersion, int desiredVersion, Status status) {
         Avatar avatar = AvatarHelper.buildDefaultAvatar(avatarId.getId());
         ObjectNode reported = (ObjectNode) avatar.getReported();
