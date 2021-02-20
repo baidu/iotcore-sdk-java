@@ -5,21 +5,25 @@
     <parent>
         <artifactId>iotcore-sdk-java</artifactId>
         <groupId>com.baidu.iot</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 
     <artifactId>iot-device-sdk-avatar-samples</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.baidu.iot</groupId>
             <artifactId>iot-device-sdk-avatar-deviceside</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.baidu.iot</groupId>
             <artifactId>iot-device-sdk-avatar-controlside</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 

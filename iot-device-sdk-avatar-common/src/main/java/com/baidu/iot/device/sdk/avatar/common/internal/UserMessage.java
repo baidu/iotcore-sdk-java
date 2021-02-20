@@ -28,8 +28,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  *
- * @Author zhangxiao18
- * @Date 2020/9/23
+ * Author zhangxiao18
+ * Date 2020/9/23
  */
 @Getter
 public class UserMessage implements Message {

@@ -17,8 +17,8 @@
 package com.baidu.iot.device.sdk.avatar.common.exception;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 public class TooManyInProcessMessageException extends RuntimeException {
 }

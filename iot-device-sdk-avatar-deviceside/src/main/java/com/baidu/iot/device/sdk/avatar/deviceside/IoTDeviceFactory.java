@@ -41,8 +41,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 @Slf4j
 public class IoTDeviceFactory {

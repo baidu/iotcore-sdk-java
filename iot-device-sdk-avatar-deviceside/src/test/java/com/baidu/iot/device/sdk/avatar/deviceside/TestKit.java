@@ -5,8 +5,8 @@ import com.baidu.iot.device.sdk.avatar.common.AvatarId;
 import java.util.UUID;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/16
+ * Author zhangxiao18
+ * Date 2020/10/16
  */
 public class TestKit {
 

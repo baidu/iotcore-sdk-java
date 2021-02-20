@@ -22,8 +22,8 @@ import io.reactivex.rxjava3.core.Single;
 /**
  * Class to hold current avatar version.
  *
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 public interface IAvatarVersionHolder {
 

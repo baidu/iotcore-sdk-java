@@ -46,8 +46,8 @@ import java.util.Map;
 /**
  * Hold all resources of device side avatar.
  *
- * @Author zhangxiao18
- * @Date 2020/10/14
+ * Author zhangxiao18
+ * Date 2020/10/14
  */
 @Slf4j
 public class DeviceSideAvatar implements IDeviceSideAvatar {

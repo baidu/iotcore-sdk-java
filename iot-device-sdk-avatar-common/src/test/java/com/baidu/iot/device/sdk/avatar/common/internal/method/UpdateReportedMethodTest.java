@@ -23,8 +23,8 @@ import org.junit.Test;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/19
+ * Author zhangxiao18
+ * Date 2020/11/19
  */
 public class UpdateReportedMethodTest {
 

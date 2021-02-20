@@ -40,8 +40,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 @Slf4j
 public class AvatarVersionHolder implements IAvatarVersionHolder {

@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/20
+ * Author zhangxiao18
+ * Date 2020/11/20
  */
 public class MqttAvatarTransportTest {
 

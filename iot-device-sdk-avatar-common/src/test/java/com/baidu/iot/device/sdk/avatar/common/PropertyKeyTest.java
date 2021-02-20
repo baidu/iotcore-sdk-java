@@ -7,8 +7,8 @@ import org.junit.Test;
 import java.util.Set;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/18
+ * Author zhangxiao18
+ * Date 2020/10/18
  */
 public class PropertyKeyTest {
 

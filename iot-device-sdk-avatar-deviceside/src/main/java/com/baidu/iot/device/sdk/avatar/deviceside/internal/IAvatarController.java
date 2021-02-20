@@ -22,8 +22,8 @@ import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.processors.PublishProcessor;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/6
+ * Author zhangxiao18
+ * Date 2020/10/6
  */
 public interface IAvatarController {
 

@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/9/24
+ * Author zhangxiao18
+ * Date 2020/9/24
  */
 @EqualsAndHashCode
 public class PropertyKey {

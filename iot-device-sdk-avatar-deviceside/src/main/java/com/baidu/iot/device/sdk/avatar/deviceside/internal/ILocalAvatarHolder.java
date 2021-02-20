@@ -23,8 +23,8 @@ import io.reactivex.rxjava3.processors.BehaviorProcessor;
 /**
  * Ensure that the local shadow is consistent with the cloud.
  *
- * @Author zhangxiao18
- * @Date 2020/10/6
+ * Author zhangxiao18
+ * Date 2020/10/6
  */
 public interface ILocalAvatarHolder {
 

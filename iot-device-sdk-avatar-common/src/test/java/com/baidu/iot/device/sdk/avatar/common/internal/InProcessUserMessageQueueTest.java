@@ -11,8 +11,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/18
+ * Author zhangxiao18
+ * Date 2020/10/18
  */
 public class InProcessUserMessageQueueTest {
 

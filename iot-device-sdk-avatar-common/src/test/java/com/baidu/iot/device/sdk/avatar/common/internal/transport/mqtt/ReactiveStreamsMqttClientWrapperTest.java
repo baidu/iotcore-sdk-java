@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/18
+ * Author zhangxiao18
+ * Date 2020/11/18
  */
 public class ReactiveStreamsMqttClientWrapperTest {
 

@@ -33,8 +33,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/23
+ * Author zhangxiao18
+ * Date 2020/11/23
  */
 public class ControlSideAvatarTest {
 

@@ -31,8 +31,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/16
+ * Author zhangxiao18
+ * Date 2020/10/16
  */
 public class AvatarVersionHolderTest {
 

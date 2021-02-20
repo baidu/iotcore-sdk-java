@@ -6,8 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/16
+ * Author zhangxiao18
+ * Date 2020/10/16
  */
 public class UserMessageTest {
 

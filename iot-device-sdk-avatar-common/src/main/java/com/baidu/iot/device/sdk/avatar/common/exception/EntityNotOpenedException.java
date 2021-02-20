@@ -20,8 +20,8 @@ import com.baidu.iot.device.sdk.avatar.common.EntityId;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/12
+ * Author zhangxiao18
+ * Date 2020/10/12
  */
 @RequiredArgsConstructor
 public class EntityNotOpenedException extends RuntimeException {

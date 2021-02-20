@@ -40,8 +40,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 @RequiredArgsConstructor
 @Slf4j

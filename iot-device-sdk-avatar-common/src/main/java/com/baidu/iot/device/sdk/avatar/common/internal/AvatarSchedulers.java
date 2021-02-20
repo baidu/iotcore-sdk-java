@@ -28,8 +28,8 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 @Slf4j
 public class AvatarSchedulers {

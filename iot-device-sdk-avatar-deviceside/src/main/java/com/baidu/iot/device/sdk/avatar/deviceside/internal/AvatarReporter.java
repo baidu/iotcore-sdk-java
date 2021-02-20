@@ -44,8 +44,8 @@ import java.util.stream.Collectors;
 
 /**
  *
- * @Author zhangxiao18
- * @Date 2020/9/24
+ * Author zhangxiao18
+ * Date 2020/9/24
  */
 @Slf4j
 @RequiredArgsConstructor

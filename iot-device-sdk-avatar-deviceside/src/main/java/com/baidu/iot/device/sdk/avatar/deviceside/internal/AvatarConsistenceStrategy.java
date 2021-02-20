@@ -21,8 +21,8 @@ import lombok.RequiredArgsConstructor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/6
+ * Author zhangxiao18
+ * Date 2020/10/6
  */
 @RequiredArgsConstructor
 public class AvatarConsistenceStrategy implements IAvatarConsistenceStrategy {

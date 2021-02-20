@@ -4,8 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/18
+ * Author zhangxiao18
+ * Date 2020/10/18
  */
 public class PropertyValueTest {
 

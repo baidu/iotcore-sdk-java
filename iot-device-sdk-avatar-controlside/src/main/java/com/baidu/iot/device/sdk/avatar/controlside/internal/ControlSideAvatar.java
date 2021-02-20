@@ -50,8 +50,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/16
+ * Author zhangxiao18
+ * Date 2020/11/16
  */
 @RequiredArgsConstructor
 public class ControlSideAvatar implements IControlSideAvatar {

@@ -39,8 +39,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/12
+ * Author zhangxiao18
+ * Date 2020/10/12
  */
 @Slf4j
 public abstract class ReqRespAvatarMethod<Req, Resp> implements IAvatarMethod {

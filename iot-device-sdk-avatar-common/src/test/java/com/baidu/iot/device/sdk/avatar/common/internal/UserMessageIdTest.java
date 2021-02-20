@@ -7,8 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/16
+ * Author zhangxiao18
+ * Date 2020/10/16
  */
 public class UserMessageIdTest {
 

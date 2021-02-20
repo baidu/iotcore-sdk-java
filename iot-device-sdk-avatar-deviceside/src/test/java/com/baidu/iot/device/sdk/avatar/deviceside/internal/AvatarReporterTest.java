@@ -27,8 +27,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/22
+ * Author zhangxiao18
+ * Date 2020/10/22
  */
 public class AvatarReporterTest {
 

@@ -25,8 +25,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/21
+ * Author zhangxiao18
+ * Date 2020/10/21
  */
 public class AvatarControllerTest {
 

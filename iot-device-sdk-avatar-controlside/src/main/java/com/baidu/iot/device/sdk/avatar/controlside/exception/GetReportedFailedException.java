@@ -21,8 +21,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/17
+ * Author zhangxiao18
+ * Date 2020/11/17
  */
 @RequiredArgsConstructor
 @Getter

@@ -24,8 +24,8 @@ import lombok.ToString;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/9/29
+ * Author zhangxiao18
+ * Date 2020/9/29
  */
 @ToString
 @EqualsAndHashCode

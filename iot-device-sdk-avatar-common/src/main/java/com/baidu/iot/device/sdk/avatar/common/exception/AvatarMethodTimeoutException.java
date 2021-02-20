@@ -21,8 +21,8 @@ import com.baidu.iot.device.sdk.avatar.common.internal.MessageId;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 @RequiredArgsConstructor
 public class AvatarMethodTimeoutException extends RuntimeException {

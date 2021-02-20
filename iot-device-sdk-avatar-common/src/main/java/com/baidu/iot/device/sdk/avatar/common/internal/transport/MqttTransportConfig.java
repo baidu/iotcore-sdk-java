@@ -25,8 +25,8 @@ import javax.net.ssl.SSLSocketFactory;
 import java.net.URI;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/18
+ * Author zhangxiao18
+ * Date 2020/11/18
  */
 @Getter
 @RequiredArgsConstructor

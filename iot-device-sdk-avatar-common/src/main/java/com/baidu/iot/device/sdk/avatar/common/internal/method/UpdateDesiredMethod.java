@@ -26,8 +26,8 @@ import com.baidu.iot.thing.avatar.operation.model.UpdateAvatarReply;
 import com.baidu.iot.thing.avatar.operation.model.UpdateAvatarRequest;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 public class UpdateDesiredMethod extends ReqRespAvatarMethod<UpdateAvatarRequest, UpdateAvatarReply> {
 

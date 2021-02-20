@@ -34,8 +34,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/6
+ * Author zhangxiao18
+ * Date 2020/11/6
  */
 public class IoTDeviceControllerFactory {
 

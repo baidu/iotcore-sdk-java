@@ -21,8 +21,8 @@ import com.baidu.iot.device.sdk.avatar.common.EntityId;
 import lombok.ToString;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 @ToString
 public class ReloadAvatarVersionFailedException extends RuntimeException {

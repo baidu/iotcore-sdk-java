@@ -20,8 +20,8 @@ import com.baidu.iot.device.sdk.avatar.common.EntityId;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/16
+ * Author zhangxiao18
+ * Date 2020/11/16
  */
 @RequiredArgsConstructor
 public class AvatarMethodAlreadyClosedException extends RuntimeException {

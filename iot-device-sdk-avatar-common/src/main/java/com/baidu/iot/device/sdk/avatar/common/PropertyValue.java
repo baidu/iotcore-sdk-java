@@ -24,8 +24,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.util.List;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/9/24
+ * Author zhangxiao18
+ * Date 2020/9/24
  */
 public class PropertyValue {
 

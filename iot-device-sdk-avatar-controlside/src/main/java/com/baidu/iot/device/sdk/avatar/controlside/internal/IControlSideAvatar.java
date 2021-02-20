@@ -29,8 +29,8 @@ import io.reactivex.rxjava3.core.Single;
 import java.util.Map;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/16
+ * Author zhangxiao18
+ * Date 2020/11/16
  */
 public interface IControlSideAvatar {
 

@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/23
+ * Author zhangxiao18
+ * Date 2020/10/23
  */
 public class LocalAvatarHolderTest {
 

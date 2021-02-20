@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 public class JsonHelper {
 

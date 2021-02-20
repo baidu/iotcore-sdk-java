@@ -21,8 +21,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import lombok.Getter;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/17
+ * Author zhangxiao18
+ * Date 2020/11/17
  */
 public class VersionedPropertyValue extends PropertyValue {
 

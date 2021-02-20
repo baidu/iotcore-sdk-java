@@ -28,8 +28,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * and the last 10 digits are used as the offset:
  * No repeated id generation within 24 days, up to 1024 messages per second
  *
- * @Author zhangxiao18
- * @Date 2020/9/25
+ * Author zhangxiao18
+ * Date 2020/9/25
  */
 @EqualsAndHashCode
 @Getter

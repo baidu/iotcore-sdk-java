@@ -17,8 +17,8 @@
 package com.baidu.iot.device.sdk.avatar.common;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 public class Constants {
 

@@ -26,8 +26,8 @@ import io.reactivex.rxjava3.core.Observable;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/13
+ * Author zhangxiao18
+ * Date 2020/10/13
  */
 @Slf4j
 public abstract class ObserveDeltaAvatarMethod implements IAvatarMethod {

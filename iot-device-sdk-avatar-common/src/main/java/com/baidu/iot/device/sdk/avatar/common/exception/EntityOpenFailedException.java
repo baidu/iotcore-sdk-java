@@ -19,8 +19,8 @@ package com.baidu.iot.device.sdk.avatar.common.exception;
 import com.baidu.iot.device.sdk.avatar.common.EntityId;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/12
+ * Author zhangxiao18
+ * Date 2020/10/12
  */
 @Deprecated
 public class EntityOpenFailedException extends RuntimeException {

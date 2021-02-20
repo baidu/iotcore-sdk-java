@@ -26,8 +26,8 @@ import io.reactivex.rxjava3.subjects.BehaviorSubject;
 /**
  *  Transport interface for avatar.
  *
- * @Author zhangxiao18
- * @Date 2020/9/22
+ * Author zhangxiao18
+ * Date 2020/9/22
  */
 public interface IAvatarTransport {
 

@@ -23,8 +23,8 @@ import io.reactivex.rxjava3.core.Completable;
  *
  * Use method instead of transport to request to server.
  *
- * @Author zhangxiao18
- * @Date 2020/10/12
+ * Author zhangxiao18
+ * Date 2020/10/12
  */
 public interface IAvatarMethod {
 

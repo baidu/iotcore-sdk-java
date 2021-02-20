@@ -37,8 +37,8 @@ import java.util.concurrent.locks.StampedLock;
 /**
  * Hold in process message.
  *
- * @Author zhangxiao18
- * @Date 2020/10/10
+ * Author zhangxiao18
+ * Date 2020/10/10
  */
 @ThreadSafe
 @Slf4j

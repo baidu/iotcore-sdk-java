@@ -38,8 +38,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/11/12
+ * Author zhangxiao18
+ * Date 2020/11/12
  */
 @Slf4j
 @RequiredArgsConstructor

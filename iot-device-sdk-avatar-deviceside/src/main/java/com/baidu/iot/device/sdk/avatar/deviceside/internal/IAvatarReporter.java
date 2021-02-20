@@ -26,8 +26,8 @@ import io.reactivex.rxjava3.core.Single;
 import java.util.Map;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/5
+ * Author zhangxiao18
+ * Date 2020/10/5
  */
 public interface IAvatarReporter {
 

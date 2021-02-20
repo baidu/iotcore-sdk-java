@@ -33,8 +33,8 @@ import lombok.RequiredArgsConstructor;
 import java.util.Map;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/7
+ * Author zhangxiao18
+ * Date 2020/10/7
  */
 @RequiredArgsConstructor
 public class Device {

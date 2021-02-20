@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/10/6
+ * Author zhangxiao18
+ * Date 2020/10/6
  */
 @Slf4j
 public class AvatarController implements IAvatarController {

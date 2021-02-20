@@ -24,8 +24,8 @@ import lombok.ToString;
 import java.util.regex.Pattern;
 
 /**
- * @Author zhangxiao18
- * @Date 2020/9/23
+ * Author zhangxiao18
+ * Date 2020/9/23
  */
 @Getter
 @EqualsAndHashCode

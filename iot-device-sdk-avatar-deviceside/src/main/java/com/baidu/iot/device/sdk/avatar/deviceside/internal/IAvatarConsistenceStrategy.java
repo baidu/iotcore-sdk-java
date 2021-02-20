@@ -19,8 +19,8 @@ package com.baidu.iot.device.sdk.avatar.deviceside.internal;
 /**
  * Determine whether the local shadow is consistent with the cloud.
  *
- * @Author zhangxiao18
- * @Date 2020/10/6
+ * Author zhangxiao18
+ * Date 2020/10/6
  */
 public interface IAvatarConsistenceStrategy {
 
