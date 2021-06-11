@@ -5,11 +5,10 @@ import com.baidu.iot.device.sdk.avatar.common.Constants;
 import com.baidu.iot.device.sdk.avatar.common.EntityId;
 import com.baidu.iot.device.sdk.avatar.common.TestKit;
 import com.baidu.iot.device.sdk.avatar.common.exception.EntityAlreadyClosedException;
-import com.baidu.iot.device.sdk.avatar.common.exception.ReloadAvatarVersionFailedException;
 import com.baidu.iot.device.sdk.avatar.common.internal.method.GetAvatarMethod;
 import com.baidu.iot.device.sdk.avatar.common.internal.model.Avatar;
 import com.baidu.iot.device.sdk.avatar.common.internal.utils.AvatarHelper;
-import com.baidu.iot.device.sdk.avatar.common.utils.JsonHelper;
+import com.baidu.iot.mqtt.common.utils.JsonHelper;
 import com.baidu.iot.thing.avatar.operation.model.GetAvatarReply;
 import com.baidu.iot.thing.avatar.operation.model.GetAvatarRequest;
 import com.baidu.iot.thing.avatar.operation.model.Status;
@@ -26,7 +25,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicBoolean;
 

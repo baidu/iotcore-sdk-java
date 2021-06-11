@@ -1,13 +1,5 @@
 package com.baidu.iot.device.sdk.avatar.common.internal.transport.mqtt;
 
-import com.baidu.iot.device.sdk.avatar.common.AvatarId;
-import com.baidu.iot.device.sdk.avatar.common.EntityId;
-import com.baidu.iot.device.sdk.avatar.common.internal.CommandMessage;
-import com.baidu.iot.device.sdk.avatar.common.internal.Message;
-import com.baidu.iot.device.sdk.avatar.common.internal.Topic;
-import com.baidu.iot.device.sdk.avatar.common.internal.UserMessage;
-import com.baidu.iot.device.sdk.avatar.common.internal.transport.IAvatarTransport;
-import com.baidu.iot.thing.avatar.operation.model.GetAvatarRequest;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
@@ -21,6 +13,7 @@ import io.reactivex.rxjava3.subjects.PublishSubject;
 import mockit.Expectations;
 import mockit.Mocked;
 import mockit.Verifications;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -32,6 +25,15 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
+
+import com.baidu.iot.device.sdk.avatar.common.AvatarId;
+import com.baidu.iot.device.sdk.avatar.common.EntityId;
+import com.baidu.iot.device.sdk.avatar.common.internal.CommandMessage;
+import com.baidu.iot.device.sdk.avatar.common.internal.Message;
+import com.baidu.iot.device.sdk.avatar.common.internal.Topic;
+import com.baidu.iot.device.sdk.avatar.common.internal.UserMessage;
+import com.baidu.iot.device.sdk.avatar.common.internal.transport.IAvatarTransport;
+import com.baidu.iot.thing.avatar.operation.model.GetAvatarRequest;
 
 /**
  * Author zhangxiao18
@@ -249,7 +251,7 @@ public class MqttAvatarTransportTest {
         });
         System.out.println(subject.hasObservers());
         subject.onNext(false);
-        Thread.sleep(100);
+        Thread.sleep(30);
         subject.onNext(true);
 
         Thread.sleep(200);

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
+  -->
+<configuration>
+    <property name="projectName" value="iot-log-sdk" />
+    <property name="logPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } [%t] --- %-40.40logger{39}[%F:%L] %m%n"/>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${logPattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter"><!-- 控制台只打印INFO及以上日志 -->
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <logger name="com.baidu.iot" level="DEBUG" />
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

@@ -16,13 +16,14 @@
 
 package com.baidu.iot.device.sdk.avatar.samples.controlside;
 
-import com.baidu.iot.device.sdk.avatar.common.MqttConfigFactory;
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.observers.DisposableSingleObserver;
+
 import com.baidu.iot.device.sdk.avatar.controlside.ControlledDevice;
 import com.baidu.iot.device.sdk.avatar.controlside.IoTDeviceController;
 import com.baidu.iot.device.sdk.avatar.controlside.IoTDeviceControllerFactory;
 import com.baidu.iot.device.sdk.avatar.controlside.VersionedPropertyValue;
-import io.reactivex.rxjava3.annotations.NonNull;
-import io.reactivex.rxjava3.observers.DisposableSingleObserver;
+import com.baidu.iot.mqtt.common.MqttConfigFactory;
 
 public class GetReportedSample {
 

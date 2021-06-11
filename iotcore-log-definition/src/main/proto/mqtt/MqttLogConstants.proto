@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package trafficlog.mqtt;
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.type.mqtt.constants";
+option java_outer_classname = "MqttLogConstantsProtos";
+option optimize_for = SPEED;
+
+
+enum LogCode {
+    // ERROR LEVEL
+    MQT100  = 0;     // Interval error
+    MQT101  = 1;     // Failed to publish will message, please try again
+    MQT102  = 2;     // Invalid mqtt message during session establishing
+    MQT103  = 3;     // Invalid topic name
+    MQT104  = 4;     // Failed to publish message, please try again
+    MQT105  = 5;     // QoS2 not supported
+    MQT107  = 7;     // Invalid topic or qos
+    MQT108  = 8;     // Failed to subscribe, please try again
+    MQT109  = 9;     // Failed to unsubscribe, please try again
+    MQT110  = 10;    // No subscription inbox found, please try again
+    MQT111  = 11;    // Will retain flag not supported
+    MQT112  = 12;    // Retain flag not supported
+    MQT113  = 13;    // Bad mqtt packet
+
+    MQT120  = 20;    // Protocol Violation
+    MQT121  = 21;    // Protocol Violation: no more connect message allowed
+    MQT122  = 22;    // Protocol Violation: empty topic list
+    MQT123  = 23;    // Protocol Violation: qos 0 message dup should be 0
+
+
+    // WARNING LEVEL
+    MQT201  = 201;   // Unauthorized to publish message to requested topic
+    MQT202  = 202;   // QPS exceeded! Please throttle your publishing speed on current connection
+    MQT203  = 203;   // Failed to decode MQTT message! Please check your message
+    MQT204  = 204;   // Message dropped due to server didn't receive ack of this message for a long time! Please
+                     // confirm that the receiving client is online and send ack for qos1 message with corresponding
+                     // packet id timely
+    MQT205  = 205;   // Unexpected message dropped
+
+
+    // INFO LEVEL
+    MQT301  = 301;   // Connect successfully
+    MQT302  = 302;   // Subscribe topics successfully
+    MQT303  = 303;   // UnSubscribe topics successfully
+    MQT304  = 304;   // Disconnect successfully
+
+
+    // DEBUG LEVEL
+    MQT401  = 401;   // Publish message to server successfully
+    MQT402  = 402;   // Will message published
+    MQT403  = 403;   // Publish message to client
+
+    MQT404  = 404;   // Server ack to client publish
+    MQT405  = 405;   // Client ack to server publish
+}
+
+enum LogDetailKey {
+    device_key = 0;
+    client_id = 1;
+    clean_session = 2;    // clean session flag
+    keepalive = 3;        // keepalive in second
+    remote_ip= 4;         // remote client ip
+    remote_port = 5;      // remote client port
+    close_reason = 6;
+    will_flag = 7;
+    will_topic = 8;
+    will_size = 9;
+    will_digest = 10;
+    will_retain = 11;
+    will_qos = 12;
+    qos = 13;              // topic in pub message
+    topic = 14;            // topic in pub message
+    topic_filters = 15;    // topic filters in sub & unsub
+    topic_filters_qos = 16;    // topic filters qos in sub & unsub
+
+    // DEBUG
+    size = 101;       // message payload size
+    message_digest = 102;      // message payload digest
+    resent_times = 103;     // message resent times
+    packet_id = 104;     // packetId
+
+}

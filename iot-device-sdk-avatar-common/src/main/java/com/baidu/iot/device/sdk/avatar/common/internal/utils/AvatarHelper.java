@@ -16,12 +16,13 @@
 
 package com.baidu.iot.device.sdk.avatar.common.internal.utils;
 
-import com.baidu.iot.device.sdk.avatar.common.Constants;
-import com.baidu.iot.device.sdk.avatar.common.internal.model.Avatar;
-import com.baidu.iot.device.sdk.avatar.common.utils.JsonHelper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import com.baidu.iot.device.sdk.avatar.common.Constants;
+import com.baidu.iot.device.sdk.avatar.common.internal.model.Avatar;
+import com.baidu.iot.mqtt.common.utils.JsonHelper;
 
 /**
  * Created by zhuchenhao at 2019/11/29

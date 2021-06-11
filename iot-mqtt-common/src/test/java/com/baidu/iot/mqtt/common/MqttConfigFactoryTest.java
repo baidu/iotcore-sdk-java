@@ -1,4 +1,7 @@
-package com.baidu.iot.device.sdk.avatar.common;
+/*
+ * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
+ */
+package com.baidu.iot.mqtt.common;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -16,8 +16,15 @@
 
 package com.baidu.iot.device.sdk.avatar.deviceside;
 
+import io.reactivex.rxjava3.core.Single;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.concurrent.ConcurrentHashMap;
+
 import com.baidu.iot.device.sdk.avatar.common.AvatarId;
-import com.baidu.iot.device.sdk.avatar.common.MqttConfig;
 import com.baidu.iot.device.sdk.avatar.common.internal.AvatarSchedulers;
 import com.baidu.iot.device.sdk.avatar.common.internal.InProcessMessageQueue;
 import com.baidu.iot.device.sdk.avatar.common.internal.transport.IAvatarTransport;
@@ -33,12 +40,7 @@ import com.baidu.iot.device.sdk.avatar.deviceside.internal.IAvatarReporter;
 import com.baidu.iot.device.sdk.avatar.deviceside.internal.IDeviceSideAvatar;
 import com.baidu.iot.device.sdk.avatar.deviceside.internal.ILocalAvatarHolder;
 import com.baidu.iot.device.sdk.avatar.deviceside.internal.LocalAvatarHolder;
-import io.reactivex.rxjava3.core.Single;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.concurrent.ConcurrentHashMap;
+import com.baidu.iot.mqtt.common.MqttConfig;
 
 /**
  * Author zhangxiao18
