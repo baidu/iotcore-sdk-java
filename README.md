@@ -57,7 +57,7 @@ device.updateReported(properties).blockingSubscribe(new DisposableSingleObserver
 
 ## iotcore-log-sdk
 ### 帮助文档
-* 详细使用文档参见wiki [iotcore-log-sdk使用指南](to be done)
+* 详细使用文档参见wiki [iotcore-log-sdk使用指南](https://github.com/baidu/iotcore-sdk-java/wiki/%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1SDK)
 * 支持的java版本：1.8及以上
     
 ### 快速开始
