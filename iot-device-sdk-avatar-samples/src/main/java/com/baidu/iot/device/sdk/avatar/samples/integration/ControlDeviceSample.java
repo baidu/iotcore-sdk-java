@@ -16,7 +16,17 @@
 
 package com.baidu.iot.device.sdk.avatar.samples.integration;
 
-import com.baidu.iot.device.sdk.avatar.common.MqttConfigFactory;
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.observers.DisposableSingleObserver;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subscribers.DisposableSubscriber;
+
+import com.google.common.util.concurrent.Uninterruptibles;
+
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.baidu.iot.device.sdk.avatar.common.PropertyKey;
 import com.baidu.iot.device.sdk.avatar.common.PropertyValue;
 import com.baidu.iot.device.sdk.avatar.controlside.ControlledDevice;
@@ -24,16 +34,8 @@ import com.baidu.iot.device.sdk.avatar.controlside.IoTDeviceController;
 import com.baidu.iot.device.sdk.avatar.controlside.IoTDeviceControllerFactory;
 import com.baidu.iot.device.sdk.avatar.deviceside.Device;
 import com.baidu.iot.device.sdk.avatar.deviceside.IoTDeviceFactory;
+import com.baidu.iot.mqtt.common.MqttConfigFactory;
 import com.baidu.iot.thing.avatar.operation.model.Status;
-import com.google.common.util.concurrent.Uninterruptibles;
-import io.reactivex.rxjava3.annotations.NonNull;
-import io.reactivex.rxjava3.observers.DisposableSingleObserver;
-import io.reactivex.rxjava3.schedulers.Schedulers;
-import io.reactivex.rxjava3.subscribers.DisposableSubscriber;
-
-import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ControlDeviceSample {
 

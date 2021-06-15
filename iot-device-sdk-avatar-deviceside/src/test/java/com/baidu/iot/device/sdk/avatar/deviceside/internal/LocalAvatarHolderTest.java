@@ -6,7 +6,7 @@ import com.baidu.iot.device.sdk.avatar.common.PropertyKey;
 import com.baidu.iot.device.sdk.avatar.common.PropertyValue;
 import com.baidu.iot.device.sdk.avatar.common.internal.model.Avatar;
 import com.baidu.iot.device.sdk.avatar.common.internal.utils.AvatarHelper;
-import com.baidu.iot.device.sdk.avatar.common.utils.JsonHelper;
+import com.baidu.iot.mqtt.common.utils.JsonHelper;
 import com.baidu.iot.device.sdk.avatar.deviceside.TestKit;
 import com.baidu.iot.thing.avatar.operation.model.Delta;
 import com.baidu.iot.thing.avatar.operation.model.GetAvatarReply;

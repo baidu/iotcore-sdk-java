@@ -16,9 +16,9 @@
 
 package com.baidu.iot.device.sdk.avatar.samples.auth;
 
-import com.baidu.iot.device.sdk.avatar.common.MqttConfigFactory;
 import com.baidu.iot.device.sdk.avatar.deviceside.Device;
 import com.baidu.iot.device.sdk.avatar.deviceside.IoTDeviceFactory;
+import com.baidu.iot.mqtt.common.MqttConfigFactory;
 
 public class MD5SignatureSample {
 

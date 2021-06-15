@@ -16,16 +16,18 @@
 
 package com.baidu.iot.device.sdk.avatar.samples.deviceside;
 
-import com.baidu.iot.device.sdk.avatar.common.MqttConfigFactory;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subscribers.DisposableSubscriber;
+
+import com.google.common.util.concurrent.Uninterruptibles;
+
+import java.time.Duration;
+
 import com.baidu.iot.device.sdk.avatar.common.PropertyKey;
 import com.baidu.iot.device.sdk.avatar.common.PropertyValue;
 import com.baidu.iot.device.sdk.avatar.deviceside.Device;
 import com.baidu.iot.device.sdk.avatar.deviceside.IoTDeviceFactory;
-import com.google.common.util.concurrent.Uninterruptibles;
-import io.reactivex.rxjava3.schedulers.Schedulers;
-import io.reactivex.rxjava3.subscribers.DisposableSubscriber;
-
-import java.time.Duration;
+import com.baidu.iot.mqtt.common.MqttConfigFactory;
 
 public class ObserveDesiredDeltaSample {
 

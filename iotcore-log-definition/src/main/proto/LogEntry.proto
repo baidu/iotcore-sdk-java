@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.type.log";
+option java_outer_classname = "LogEntryMessageProtos";
+package LogEntryMessage;
+
+message LogEntry {
+    uint32 level = 1;
+    string code = 2; // must 6 bytes long in format XXXnnn
+    map<int32, string> details = 3;
+    uint32 repeated = 4;
+    uint64 timestamp = 5;
+}
+
+message LogEntries {
+    repeated LogEntry entries = 1;
+}
+
+

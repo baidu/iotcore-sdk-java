@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package trafficlog.dist;
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.type.dist.constants";
+option java_outer_classname = "DistLogConstantsProtos";
+option optimize_for = SPEED;
+
+
+enum LogCode {
+
+    // ERROR LEVEL
+    DST001  = 0; // Receiving broker is not ready, try later
+    DST002  = 1; // No downstream broker service registered for current core
+    DST003  = 2; // Failed to publish due to transient network error, try again
+
+    // WARN LEVEL
+    DST004  = 3; // Target inbox is full, please consume pending messages
+    DST005  = 4; // Drop message due to rate limit exceeded
+
+}

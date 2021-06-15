@@ -16,6 +16,16 @@
 
 package com.baidu.iot.device.sdk.avatar.deviceside;
 
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.processors.BehaviorProcessor;
+
+import com.google.common.collect.Lists;
+
+import lombok.RequiredArgsConstructor;
+
+import java.util.Map;
+
 import com.baidu.iot.device.sdk.avatar.common.AvatarId;
 import com.baidu.iot.device.sdk.avatar.common.PropertyKey;
 import com.baidu.iot.device.sdk.avatar.common.PropertyValue;
@@ -24,13 +34,6 @@ import com.baidu.iot.device.sdk.avatar.deviceside.internal.IAvatarReporter;
 import com.baidu.iot.device.sdk.avatar.deviceside.internal.IDeviceSideAvatar;
 import com.baidu.iot.device.sdk.avatar.deviceside.internal.ILocalAvatarHolder;
 import com.baidu.iot.thing.avatar.operation.model.Status;
-import com.google.common.collect.Lists;
-import io.reactivex.rxjava3.core.Completable;
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.processors.BehaviorProcessor;
-import lombok.RequiredArgsConstructor;
-
-import java.util.Map;
 
 /**
  * Author zhangxiao18

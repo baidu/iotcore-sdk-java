@@ -16,22 +16,24 @@
 
 package com.baidu.iot.device.sdk.avatar.controlside;
 
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.observers.DisposableSingleObserver;
+
+import lombok.Builder;
+import lombok.Getter;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import com.baidu.iot.device.sdk.avatar.common.EntityId;
-import com.baidu.iot.device.sdk.avatar.common.MqttConfig;
 import com.baidu.iot.device.sdk.avatar.common.internal.AvatarSchedulers;
 import com.baidu.iot.device.sdk.avatar.common.internal.InProcessMessageQueue;
 import com.baidu.iot.device.sdk.avatar.common.internal.transport.MqttTransportConfig;
 import com.baidu.iot.device.sdk.avatar.common.internal.transport.mqtt.MqttAvatarTransport;
 import com.baidu.iot.device.sdk.avatar.controlside.internal.ControlSideAvatar;
 import com.baidu.iot.device.sdk.avatar.controlside.internal.IControlSideAvatar;
-import io.reactivex.rxjava3.annotations.NonNull;
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.observers.DisposableSingleObserver;
-import lombok.Builder;
-import lombok.Getter;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import com.baidu.iot.mqtt.common.MqttConfig;
 
 /**
  * Author zhangxiao18

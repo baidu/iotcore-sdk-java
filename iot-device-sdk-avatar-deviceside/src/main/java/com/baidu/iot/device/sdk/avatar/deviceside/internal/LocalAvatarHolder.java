@@ -21,7 +21,7 @@ import com.baidu.iot.device.sdk.avatar.common.Constants;
 import com.baidu.iot.device.sdk.avatar.common.PropertyKey;
 import com.baidu.iot.device.sdk.avatar.common.PropertyValue;
 import com.baidu.iot.device.sdk.avatar.common.internal.AvatarSchedulers;
-import com.baidu.iot.device.sdk.avatar.common.utils.JsonHelper;
+import com.baidu.iot.mqtt.common.utils.JsonHelper;
 import com.baidu.iot.thing.avatar.operation.model.Delta;
 import com.baidu.iot.thing.avatar.operation.model.GetAvatarReply;
 import com.fasterxml.jackson.databind.node.ObjectNode;

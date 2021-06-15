@@ -1,30 +1,11 @@
 /*
- * Copyright (c) 2020 Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
  */
 
-package com.baidu.iot.device.sdk.avatar.common.utils;
+package com.baidu.iot.mqtt.common.utils;
 
 import sun.misc.BASE64Decoder;
 
-import javax.net.ssl.KeyManager;
-import javax.net.ssl.KeyManagerFactory;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
-import javax.net.ssl.X509TrustManager;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.File;
@@ -39,6 +20,14 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.Arrays;
+
+import javax.net.ssl.KeyManager;
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.X509TrustManager;
 
 public class SSLSocketFactoryGenerator {
 
@@ -76,18 +65,19 @@ public class SSLSocketFactoryGenerator {
 
     private static KeyManager[] getKeyManager(File certFile, File certPrivateKeyFile)
             throws Exception {
-        CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
-        InputStream in = new ByteArrayInputStream(fileToBytes(certFile));
-        X509Certificate x509Certificate = (X509Certificate) certFactory.generateCertificate(in);
-        PrivateKey privateKey = getPrivateKey(certPrivateKeyFile);
-        KeyStore keyStore1 = KeyStore.getInstance(KeyStore.getDefaultType());
-        keyStore1.load(null);
-        keyStore1.setCertificateEntry("cert-alias", x509Certificate);
-        keyStore1.setKeyEntry("key-alias", privateKey, "notUse".toCharArray(), new Certificate[]{x509Certificate});
-        KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
-        kmf.init(keyStore1, "notUse".toCharArray());
-        KeyManager[] km = kmf.getKeyManagers();
-        return km;
+        try (InputStream in = new ByteArrayInputStream(fileToBytes(certFile))) {
+            CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
+            X509Certificate x509Certificate = (X509Certificate) certFactory.generateCertificate(in);
+            PrivateKey privateKey = getPrivateKey(certPrivateKeyFile);
+            KeyStore keyStore1 = KeyStore.getInstance(KeyStore.getDefaultType());
+            keyStore1.load(null);
+            keyStore1.setCertificateEntry("cert-alias", x509Certificate);
+            keyStore1.setKeyEntry("key-alias", privateKey, "notUse".toCharArray(), new Certificate[]{x509Certificate});
+            KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
+            kmf.init(keyStore1, "notUse".toCharArray());
+            KeyManager[] km = kmf.getKeyManagers();
+            return km;
+        }
     }
 
     private static PrivateKey getPrivateKey(File certPrivateKeyFile) throws Exception {
@@ -107,10 +97,11 @@ public class SSLSocketFactoryGenerator {
     }
 
     private static byte[] fileToBytes(File file) throws IOException {
-        InputStream input = new FileInputStream(file);
-        byte[] bytes = new byte[input.available()];
-        input.read(bytes);
-        return bytes;
+        try (InputStream input = new FileInputStream(file)) {
+            byte[] bytes = new byte[input.available()];
+            input.read(bytes);
+            return bytes;
+        }
     }
 
 }
