@@ -6,8 +6,6 @@ package com.baidu.iot.mqtt.common;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.net.URI;
 
 public class MqttConfigFactoryTest {
@@ -22,20 +20,6 @@ public class MqttConfigFactoryTest {
         Assert.assertEquals(username, mqttConfig.getUsername());
         Assert.assertEquals(password, mqttConfig.getPassword());
         Assert.assertNull(mqttConfig.getSslSocketFactory());
-    }
-
-    @Test
-    public void testGenSslMqttConfig() throws FileNotFoundException {
-        String iotCoreId = "test";
-        File caCertFile = new File(this.getClass().getClassLoader().getResource("GlobalSign.cer").getFile());
-        File deviceCertFile = new File(this.getClass().getClassLoader().getResource("deviceCert.cer").getFile());
-        File devicePrivateKeyFile = new File(
-                this.getClass().getClassLoader().getResource("devicePrivateKey.cer").getFile());
-
-        MqttConfig mqttConfig = MqttConfigFactory.genSSlMqttConfig(
-                iotCoreId, caCertFile, deviceCertFile, devicePrivateKeyFile);
-        Assert.assertEquals(URI.create("ssl://test.iot.gz.baidubce.com:1884"), mqttConfig.getUri());
-        Assert.assertNotNull(mqttConfig.getSslSocketFactory());
     }
 
     @Test
