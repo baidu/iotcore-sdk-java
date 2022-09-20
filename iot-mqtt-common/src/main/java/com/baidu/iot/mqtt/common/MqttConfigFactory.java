@@ -4,16 +4,16 @@
 
 package com.baidu.iot.mqtt.common;
 
+import com.baidu.iot.mqtt.common.utils.BceIAMSignatureGenerator;
+import com.baidu.iot.mqtt.common.utils.SSLSocketFactoryGenerator;
+import com.baidu.iot.mqtt.common.utils.SignatureGenerator;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URI;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
-
-import com.baidu.iot.mqtt.common.utils.BceIAMSignatureGenerator;
-import com.baidu.iot.mqtt.common.utils.SSLSocketFactoryGenerator;
-import com.baidu.iot.mqtt.common.utils.SignatureGenerator;
 
 public class MqttConfigFactory {
 
@@ -24,6 +24,8 @@ public class MqttConfigFactory {
     public static MqttConfig genPlainMqttConfig(String iotCoreId, String username, char[] password) {
         URI uri = URI.create("tcp://" + String.format(defaultTcpIotCoreEndpointPattern, iotCoreId));
         return genPlainMqttConfig(uri, username, password);
+
+
     }
 
     public static MqttConfig genPlainMqttConfig(URI uri, String username, char[] password) {
