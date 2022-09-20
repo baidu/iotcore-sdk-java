@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.file.delivery.message";
+option java_outer_classname = "FileDeliveryMessageProtos";
+
+message DownloadRequest {
+  string clientId = 1;
+  string fileName = 2;
+  uint64 sessionId = 3;
+}
+
+message FileMetaData {
+  uint64 fileSize = 1;
+  uint32 chunkSize = 2;
+}
+
+message DownloadHeader {
+  enum Reply {
+    ACCEPTED = 0;
+    REJECTED = 1;
+  }
+  Reply reply = 1;
+  FileMetaData fileMetaData = 2;
+}
+
+message Download {
+  uint64 seq = 1;
+  bytes chunkData = 2;
+}
+
+message DownloadDataMessage {
+  oneof dataMessage {
+    DownloadHeader header = 1;
+    Download download = 2;
+  }
+}
+
+message UploadRequest {
+  string clientId = 1;
+  string fileName = 2;
+  uint64 sessionId = 3;
+  FileMetaData fileMetaData = 4;
+}
+
+message UploadAck {
+  enum Reply {
+    ACCEPTED = 0;
+    REJECTED = 1;
+  }
+  Reply reply = 1;
+}
+
+message UploadDataMessage {
+  uint64 seq = 1;
+  bytes chunk = 2;
+}
+

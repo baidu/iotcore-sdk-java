@@ -42,6 +42,8 @@
         <module>iotcore-shared-sub-transport</module>
         <module>iot-mqtt-common</module>
         <module>iotcore-logger-standalone</module>
+        <module>iotcore-file-delivery</module>
+        <module>iotcore-file-delivery-message-definition</module>
     </modules>
 
     <properties>
