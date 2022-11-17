@@ -1,6 +1,6 @@
 # IoTCore SDK for Java
 
-This repository is for easy and better interaction with [IoTCore Service](https://cloud.baidu.com/product/iot.html) with MQTT protocol. Currently, there are 3 modules.
+This repository is for easy and better interaction with [IoTCore Service](https://cloud.baidu.com/product/iot.html) over MQTT protocol. Currently, there are 3 modules.
 
 - **iotcore-device-avatar**. With the SDK, using [IoTCore Avatar Service](https://cloud.baidu.com/doc/IoTCore/s/Nkdildw8v) can be much easier and straightforward.
 - **iotcore-file-delivery**. With the SDK, users can upload and download large files beyond single message limitation.
@@ -11,7 +11,7 @@ To get started with a specific module SDK, see the corresponding **README.md** f
 ### Prerequisites
 All the module are based on Java 8.
 ### Historical Versions
-There is a **CHANGELOG.md** file located in each module folder to track its release history and key changes for each release.
+There is a **CHANGELOG.md** file located in each module folder to track its release history and key changes.
 
 ## Contributing
 This project welcomes contributions and suggestions. For details on contributing to this repository, see the [contributing guide](./eng/CONTRIBUTING.md).

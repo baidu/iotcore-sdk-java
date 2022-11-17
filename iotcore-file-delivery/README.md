@@ -1,4 +1,4 @@
-# File Delivery SDK
+# IoTCore File Delivery SDK for Java
 ## Overview
 This is an mqtt based file delivery SDK. According to the [IoTCore system restrictions](https://cloud.baidu.com/doc/IoTCore/s/3k7o8yehh), 
 the maximum pay load for a single message is 32 KB which can be awkward under some cases such as AI model delivery and image transfer. 
