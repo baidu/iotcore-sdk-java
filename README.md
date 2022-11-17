@@ -6,7 +6,7 @@ IoT Core java sdk，包含：
 ## iot-device-sdk
 ### 帮助文档
 * 详细使用文档参见wiki [iot-device-sdk使用指南](https://github.com/baidu/iotcore-sdk-java/wiki)
-* 支持的java版本：1.8及以上
+* 支持的java版本：1.8
 
     
 ### 快速开始

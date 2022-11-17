@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FindBugsFilter>
+  <Match>
+    <Class name="com.baidu.iot.mqtt.common.MqttConfig"/>
+    <Bug pattern="DM_DEFAULT_ENCODING, EI_EXPOSE_REP"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.mqtt.common.utils.SSLSocketFactoryGenerator"/>
+    <Bug pattern="DM_DEFAULT_ENCODING, OBL_UNSATISFIED_OBLIGATION, HARD_CODE_PASSWORD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.mqtt.common.utils.SignatureGenerator"/>
+    <Bug pattern="DM_DEFAULT_ENCODING"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.thing.avatar.operation.model.GetAvatarReply$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.thing.avatar.operation.model.GetAvatarRequest$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.thing.avatar.operation.model.Operation$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.thing.avatar.operation.model.UpdateAvatarReply$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.common.EntityId"/>
+    <Bug pattern="PREDICTABLE_RANDOM"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.common.internal.InProcessMessageQueue"/>
+    <Bug pattern="VO_VOLATILE_INCREMENT"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.common.internal.transport.MqttTransportConfig"/>
+    <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.common.internal.transport.mqtt.MqttAvatarTransport"/>
+    <Bug pattern="RV_RETURN_VALUE_IGNORED"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.deviceside.internal.AvatarController"/>
+    <Bug pattern="RV_RETURN_VALUE_IGNORED"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.device.sdk.avatar.deviceside.internal.LocalAvatarHolder$AvatarValueHolder"/>
+    <Bug pattern="RV_RETURN_VALUE_IGNORED"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.type.log.LogEntry"/>
+    <Bug pattern="SE_BAD_FIELD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.type.log.LogEntry$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.shared.sub.transport.MqttTransportConfig"/>
+    <Bug pattern="EI_EXPOSE_REP"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.shared.sub.transport.MqttTransportConfig$MqttTransportConfigBuilder"/>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.shared.sub.transport.model.TransportMessage"/>
+    <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.shared.sub.transport.model.TransportMessage$TransportMessageBuilder"/>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.log.sdk.Config"/>
+    <Bug pattern="EI_EXPOSE_REP"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.log.sdk.Config$ConfigBuilder"/>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.log.sdk.IotCoreLogger"/>
+    <Bug pattern="RV_RETURN_VALUE_IGNORED"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.logger.standalone.Args"/>
+    <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.logger.standalone.Main"/>
+    <Bug pattern="RV_RETURN_VALUE_IGNORED"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.Download$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.DownloadDataMessage$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.DownloadHeader$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.DownloadRequest$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.FileMetaData$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.UploadAck$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.UploadDataMessage$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.message.UploadRequest$Builder"/>
+    <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+  </Match>
+
+  <!-- iotcore-file-delivery-sdk -->
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.Peer"/>
+    <Bug pattern="PATH_TRAVERSAL_IN"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.task.AbstractReadTask$FileReader"/>
+    <Bug pattern="PATH_TRAVERSAL_IN"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.task.AbstractReadTask$InFlightTaskMessage"/>
+    <Bug pattern="SIC_INNER_SHOULD_BE_STATIC"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.task.DownloadResponseTask"/>
+    <Bug pattern="PATH_TRAVERSAL_IN"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.IoTCoreClient"/>
+    <Bug pattern="PATH_TRAVERSAL_IN"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.task.UploadWriteTask"/>
+    <Bug pattern="PATH_TRAVERSAL_OUT"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.task.DownloadWriteTask"/>
+    <Bug pattern="PATH_TRAVERSAL_OUT"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.utils.TaskMessage"/>
+    <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.Peer"/>
+    <Bug pattern="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.example.concurrent.ConcurrentDownloadTest"/>
+    <Bug pattern="HARD_CODE_PASSWORD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.example.concurrent.ConcurrentUploadTest"/>
+    <Bug pattern="HARD_CODE_PASSWORD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.example.standalone.SDKDownloader"/>
+    <Bug pattern="HARD_CODE_PASSWORD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.example.standalone.SDKResponder"/>
+    <Bug pattern="HARD_CODE_PASSWORD"/>
+  </Match>
+
+  <Match>
+    <Class name="com.baidu.iot.file.delivery.example.standalone.SDKUploader"/>
+    <Bug pattern="HARD_CODE_PASSWORD"/>
+  </Match>
+
+</FindBugsFilter>
