@@ -1,7 +1,7 @@
 IoTCore-SDK-Java Contributing Guide
 -------------------------------------
 
-Thank you for your interest in contributing to Azure-SDK-Java.
+Thank you for your interest in contributing to IoTCore-SDK-Java.
 
 - For reporting bugs, requesting features, or asking for support, please file an issue in the [Issues](https://github.com/baidu/iotcore-sdk-java/issues) section of the project. And there are corresponding templates may help you describe the issues better.
 
@@ -33,5 +33,5 @@ Pull Requests
 ### Testing for SpotBugs and CheckStyle issues
 SpotBugs and CheckStyle are configured to break the build if there are any issues discovered by them. It is therefore strongly recommended to run the following maven goals locally before submitting a pull request:
 ```shell
-mvn spotbugs:check checkstyle:checkstyle-aggregate -DskipTests -Dgpg.skip -pl groupId:artifactId" -am
+mvn spotbugs:check checkstyle:checkstyle-aggregate -DskipTests -Dgpg.skip -pl groupId:artifactId -am
 ```
