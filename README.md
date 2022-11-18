@@ -1,116 +1,27 @@
-# IoTCore sdk
-IoT Core java sdk，包含：
-- 影子设备侧和控制侧sdk：隐藏了mqtt协议以及网络细节，方便用户使用物联网核心套件影子相关功能，支持多种认证方式（包含签名，ssl等），并提供上报信息，下发指令以及监听指令变化等功能。
-- IoTCore日志服务sdk：可以通过sdk快速的通过原生的mqtt方式使用IoTCore的日志服务，隐藏了mqtt协议的使用及维护细节，内部采用多client共享订阅的方式保证了日志量较大的情况下消息通道的拓展性。
+# IoTCore SDK for Java
 
-## iot-device-sdk
-### 帮助文档
-* 详细使用文档参见wiki [iot-device-sdk使用指南](https://github.com/baidu/iotcore-sdk-java/wiki)
-* 支持的java版本：1.8及以上
+This repository is for easy and better interaction with [IoTCore Service](https://cloud.baidu.com/product/iot.html) over MQTT protocol. Currently, there are 3 modules.
 
-    
-### 快速开始
->其他场景参考 [示例代码](https://github.com/baidu/iotcore-sdk-java/tree/main/iot-device-sdk-avatar-samples/src/main/java/com/baidu/iot/device/sdk/avatar/samples)
-#### 添加maven依赖
-```$xslt
-<dependency>
-  <groupId>com.baidu.iot</groupId>
-  <artifactId>iot-device-sdk-avatar-deviceside</artifactId>
-  <version>1.0.3</version>
-</dependency>
-```
-#### 初始化
-```$xslt
-String iotCoreId = "yourIoTCoreId"; 
-String deviceName = "yourDeviceKey";  
-String username = "yourIoTCoreId/yourDeviceKey";
-char[] password = "yourDeviceSecret".toCharArray();
+- **iotcore-device-avatar**. With the SDK, using [IoTCore Avatar Service](https://cloud.baidu.com/doc/IoTCore/s/Nkdildw8v) can be much easier and straightforward.
+- **iotcore-file-delivery**. With the SDK, users can upload and download large files beyond single message limitation.
+- **iotcore-logger**. With the SDK, users can receive system events for better message-tracking and troubleshooting.
 
-IoTDeviceFactory factory = new IoTDeviceFactory(IoTDeviceFactory.Config.builder()
-        .iotCoreId(iotCoreId)
-        .build());
+## Getting Started
+To get started with a specific module SDK, see the corresponding **README.md** file located in the module folder. Also, detailed explanations are presented in it.
+### Prerequisites
+All the module are based on Java 8.
+### Historical Versions
+There is a **CHANGELOG.md** file located in each module folder to track its release history and key changes.
 
-Device device = factory.getDevice(deviceName,
-                MqttConfigFactory.genPlainMqttConfig(iotCoreId, username, password))
-                .blockingGet();
-```
+## Contributing
+This project welcomes contributions and suggestions. For details on contributing to this repository, see the [contributing guide](./eng/CONTRIBUTING.md).
 
-#### 上报属性
-```$xslt
-Map<PropertyKey, PropertyValue> properties = new HashMap<>();
-properties.put(new PropertyKey("test"), new PropertyValue("\"test value\""));
-device.updateReported(properties).blockingSubscribe(new DisposableSingleObserver<Status>() {
-    @Override
-    public void onSuccess(@NonNull Status status) {
-        System.out.println("Update reported success, status:" + status);
-    }
+### Additional Links for Contributors
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-        System.out.println("Update reported failure");
-        e.printStackTrace();
-    }
-});
-```
-### 测试
-参考 [创建设备](https://cloud.baidu.com/doc/IoTCore/s/rk7omsf4h) 创建可以连接到iotCore的设备，再通过示例代码验证
+- [Issues](https://github.com/baidu/iotcore-sdk-java/issues) sections and [issue template](./.github/ISSUE_TEMPLATE).
+- Frequently Asked Questions (FAQ) and Conceptual Topics in the detailed [IoTCore SDk for Java wiki](https://github.com/baidu/iotcore-sdk-java/wiki);
 
-## iotcore-log-sdk
-### 帮助文档
-* 详细使用文档参见wiki [iotcore-log-sdk使用指南](https://github.com/baidu/iotcore-sdk-java/wiki/%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1SDK)
-* 支持的java版本：1.8及以上
-    
-### 快速开始
 
-#### 添加maven依赖
-```$xslt
-<dependency>
-  <groupId>com.baidu.iot</groupId>
-  <artifactId>iotcore-log-sdk</artifactId>
-  <version>1.0.3</version>
-</dependency>
-```
-#### 初始化IotCoreLogger
-```$xslt
-String iotCoreId = "yourIoTCoreId";
-String username = "yourIoTCoreId/yourDeviceKey";
-char[] password = "yourDeviceSecret".toCharArray();
-
-MqttConfig mqttConfig = MqttConfigFactory.genPlainMqttConfig(iotCoreId, username, password);
-
-Config config = Config.builder()
-        .iotCoreId(iotCoreId)
-        .mqttConfig(mqttConfig)
-        .logLevel(LogLevel.INFO)
-        .includeLowerLevel(true)
-        .clientPoolSize(3)
-        .build();
-
-IotCoreLoggerRegister register = new IotCoreLoggerRegister();
-IotCoreLogger logger = register.registerLogger(config).blockingGet();
-```
-
-#### 接收日志
-```$xslt
-logger.receive().subscribeWith(new DisposableObserver<LogEntry>() {
-    @Override
-    public void onNext(@NonNull LogEntry logEntry) {
-        // handle logEntry
-        System.out.println(logEntry);
-    }
-
-    @Override
-    public void onError(@NonNull Throwable e) {
-        // handle error
-        e.printStackTrace();
-        dispose();
-    }
-
-    @Override
-    public void onComplete() {
-        dispose();
-    }
-});
-```
-
+## License
+IoTCore SDK for Java is licensed under [Apache](./LICENSE) license.
 

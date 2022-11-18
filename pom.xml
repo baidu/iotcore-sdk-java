@@ -32,37 +32,189 @@
     </scm>
 
     <modules>
-        <module>iot-device-sdk-avatar-common</module>
-        <module>iot-device-sdk-avatar-deviceside</module>
-        <module>iot-device-sdk-avatar-samples</module>
-        <module>iot-device-sdk-avatar-controlside</module>
-        <module>iot-device-avatar-model-definition</module>
-        <module>iotcore-log-definition</module>
-        <module>iotcore-log-sdk</module>
-        <module>iotcore-shared-sub-transport</module>
-        <module>iot-mqtt-common</module>
-        <module>iotcore-logger-standalone</module>
+        <module>iotcore-mqtt-common</module>
+        <module>iotcore-device-avatar</module>
+        <module>iotcore-logger</module>
+        <module>iotcore-file-delivery</module>
     </modules>
 
     <properties>
+        <!-- sub module version -->
+        <iotcore-divice-avatar.version>1.0.3</iotcore-divice-avatar.version>
+        <iotcore-file-delivery.version>1.0.3</iotcore-file-delivery.version>
+        <iotcore-logger.version>1.0.3</iotcore-logger.version>
+        <iotcore-mqtt-common.version>1.0.3</iotcore-mqtt-common.version>
+
+        <!-- third party dependencies version -->
         <jmockit.version>1.48</jmockit.version>
         <java.version>1.8</java.version>
-        <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <source.encoding>UTF-8</source.encoding>
+        <lombok.version>1.18.16</lombok.version>
+        <slf4j-api.version>1.7.30</slf4j-api.version>
+        <org.eclipse.paho.client.mqttv3.version>1.2.5</org.eclipse.paho.client.mqttv3.version>
+        <bcprov-jdk16.version>1.46</bcprov-jdk16.version>
+        <logback-classic.version>1.2.3</logback-classic.version>
+        <guava.version>30.0-jre</guava.version>
+        <rxjava.version>3.0.8</rxjava.version>
+        <junit.version>4.13.1</junit.version>
+        <protobuf-java.version>3.13.0</protobuf-java.version>
+        <netty-common.version>4.1.55.Final</netty-common.version>
+        <disruptor.version>3.4.4</disruptor.version>
+        <jcommander.version>1.81</jcommander.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
+        <checkstyle.version>9.3</checkstyle.version>
+
+        <!-- plugin version -->
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
+        <maven-javadoc-plugin.version>3.4.0</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
+        <os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
+        <spring-boot-maven-plugin.version>2.1.0.RELEASE</spring-boot-maven-plugin.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- iotcore-device-avatar -->
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-device-avatar-common</artifactId>
+                <version>${iotcore-divice-avatar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-device-avatar-controlside</artifactId>
+                <version>${iotcore-divice-avatar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-device-avatar-deviceside</artifactId>
+                <version>${iotcore-divice-avatar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-device-avatar-model-definition</artifactId>
+                <version>${iotcore-divice-avatar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-device-avatar-samples</artifactId>
+                <version>${iotcore-divice-avatar.version}</version>
+            </dependency>
+            <!-- iotcore-file-delivery -->
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-file-delivery-message-definition</artifactId>
+                <version>${iotcore-file-delivery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-file-delivery-sdk</artifactId>
+                <version>${iotcore-file-delivery.version}</version>
+            </dependency>
+            <!-- iotcore-logger -->
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-logger-definition</artifactId>
+                <version>${iotcore-logger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-logger-sdk</artifactId>
+                <version>${iotcore-logger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-shared-sub-transport</artifactId>
+                <version>${iotcore-logger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-logger-standalone</artifactId>
+                <version>${iotcore-logger.version}</version>
+            </dependency>
+            <!-- iotcore-mqtt-common -->
+            <dependency>
+                <groupId>com.baidu.iot</groupId>
+                <artifactId>iotcore-mqtt-common</artifactId>
+                <version>${iotcore-mqtt-common.version}</version>
+            </dependency>
+
+            <!-- third party dependencies -->
+            <dependency>
+                <groupId>org.eclipse.paho</groupId>
+                <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+                <version>${org.eclipse.paho.client.mqttv3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk16</artifactId>
+                <version>${bcprov-jdk16.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.reactivex.rxjava3</groupId>
+                <artifactId>rxjava</artifactId>
+                <version>${rxjava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jmockit</groupId>
+                <artifactId>jmockit</artifactId>
+                <version>${jmockit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-common</artifactId>
+                <version>${netty-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.beust</groupId>
+                <artifactId>jcommander</artifactId>
+                <version>${jcommander.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.16</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
     </dependencies>
 
@@ -112,7 +264,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>${maven-gpg-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -132,7 +284,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.7</version>
+                        <version>${nexus-staging-maven-plugin.version}</version>
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>maven</serverId>
@@ -153,7 +305,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.8.1</version>
+                        <version>${maven-compiler-plugin.version}</version>
                         <configuration>
                             <source>${java.version}</source>
                             <target>${java.version}</target>
@@ -163,7 +315,7 @@
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.7.9</version>
+                        <version>${jacoco-maven-plugin.version}</version>
                         <configuration>
                         </configuration>
                         <executions>
@@ -228,8 +380,36 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>${checkstyle.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <configLocation>./eng/checkstyle.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
+                    <violationSeverity>error</violationSeverity>
+                    <sourceDirectories>
+                        <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                    </sourceDirectories>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -242,6 +422,21 @@
                     <argLine>
                         -javaagent:${settings.localRepository}/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
                     </argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.2.2</version> <!-- {x-version-update;com.github.spotbugs:spotbugs-maven-plugin;external_dependency} -->
+                <configuration>
+                    <excludeFilterFile>./eng/spotbugs-exclude.xml</excludeFilterFile>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.h3xstream.findsecbugs</groupId>
+                            <artifactId>findsecbugs-plugin</artifactId>
+                            <version>1.9.0</version> <!-- {x-version-update;com.h3xstream.findsecbugs:findsecbugs-plugin;external_dependency} -->
+                        </plugin>
+                    </plugins>
                 </configuration>
             </plugin>
         </plugins>
