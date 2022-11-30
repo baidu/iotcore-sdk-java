@@ -82,10 +82,16 @@ public class DownloadWriteTask extends AbstractWriteTask {
 
     public void close(DownloadResult result) {
         close();
-        if (timeout == true && result != DownloadResult.OK) {
-            future.completeExceptionally(new IoTCoreTimeoutException("wait too much idle time for next chunk"));
-        }else {
+        if (!future.isCompletedExceptionally()) {
             future.complete(result);
+        }
+    }
+
+    @Override
+    protected void close() {
+        super.close();
+        if (timeout == true) {
+            future.completeExceptionally(new IoTCoreTimeoutException("wait too much idle time for next chunk"));
         }
     }
 }

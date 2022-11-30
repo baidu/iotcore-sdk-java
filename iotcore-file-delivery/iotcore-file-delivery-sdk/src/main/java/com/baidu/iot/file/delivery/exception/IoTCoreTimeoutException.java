@@ -3,16 +3,11 @@
 
 package com.baidu.iot.file.delivery.exception;
 
+/**
+ * It is an exception that is thrown when the peer is waiting for too much time and will give up its current task.
+ */
 public class IoTCoreTimeoutException extends RuntimeException {
     public IoTCoreTimeoutException(String message) {
         super(message);
-    }
-
-    public IoTCoreTimeoutException(Throwable cause) {
-        super(cause);
-    }
-
-    public IoTCoreTimeoutException(String message, Throwable cause) {
-        super(message, cause);
     }
 }
