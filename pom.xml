@@ -41,7 +41,7 @@
     <properties>
         <!-- sub module version -->
         <iotcore-divice-avatar.version>1.0.3</iotcore-divice-avatar.version>
-        <iotcore-file-delivery.version>1.0.3</iotcore-file-delivery.version>
+        <iotcore-file-delivery.version>1.0.0</iotcore-file-delivery.version>
         <iotcore-logger.version>1.0.3</iotcore-logger.version>
         <iotcore-mqtt-common.version>1.0.3</iotcore-mqtt-common.version>
 
