@@ -35,3 +35,9 @@ SpotBugs and CheckStyle are configured to break the build if there are any issue
 ```shell
 mvn spotbugs:check checkstyle:checkstyle-aggregate -DskipTests -Dgpg.skip -pl groupId:artifactId -am
 ```
+
+### Unit Test Coverage
+check the unit test and its coverage before make a pull request
+```shell
+mvn clean install
+```

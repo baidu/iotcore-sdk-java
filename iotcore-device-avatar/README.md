@@ -15,7 +15,7 @@ IoTCore Device Avatar SDK for Java，包含：
 ```$xslt
 <dependency>
   <groupId>com.baidu.iot</groupId>
-  <artifactId>iot-device-sdk-avatar-deviceside</artifactId>
+  <artifactId>iotcore-device-avatar-deviceside</artifactId>
   <version>1.0.3</version>
 </dependency>
 ```
@@ -53,6 +53,6 @@ device.updateReported(properties).blockingSubscribe(new DisposableSingleObserver
 });
 ```
 ## 测试
-参考 [创建设备](https://cloud.baidu.com/doc/IoTCore/s/rk7omsf4h) 创建可以连接到iotCore的设备，再通过示例代码验证
+参考 [创建设备](https://cloud.baidu.com/doc/IoTCore/s/rk7omsf4h) 创建可以连接到IotCore的设备，再通过示例代码验证
 
 

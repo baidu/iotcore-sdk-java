@@ -11,7 +11,7 @@ To import the dependency, the maven goes:
 <dependency>
    <groupId>com.baidu.bce-iot</groupId>
    <artifactId>iotcore-file-delivery</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+   <version>1.0.0</version>
 </dependency>
 ```
 In the SDK, the minimum unit is peer which warps an mqtt client. Beginning with, one should first create `Peer` instance with IoTCore credentials and basic information.
@@ -44,5 +44,5 @@ After instancing the `peer`, one can invoke following methods for file delivery 
 
    Interaction with IoTCore may fail under some cases such as data loss due to the underlying network issue. It can make the peer to retry several times for a failed message delivery with IoTCore.
 
-## Changelog
+## CHANGELOG
 Detailed changes for each release are documented in the release [notes](./CHANGELOG.md).

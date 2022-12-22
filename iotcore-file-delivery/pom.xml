@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
+    <version>1.0.0</version>
+
     <artifactId>iotcore-file-delivery</artifactId>
     <modules>
         <module>iotcore-file-delivery-message-definition</module>
