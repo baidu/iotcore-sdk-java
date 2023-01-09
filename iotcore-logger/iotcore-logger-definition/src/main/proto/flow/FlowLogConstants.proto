@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package trafficlog.flow;
+
+option java_multiple_files = true;
+option java_package = "com.baidu.iot.type.flow.constants";
+option java_outer_classname = "FlowLogConstantsProtos";
+option optimize_for = SPEED;
+
+enum LogCode {
+  // Data source service: error level
+
+  FL_100 = 0;  // Data source service exception
+
+  // Message process: warn level
+
+  FL_300 = 300;  // Invalid json data
+  FL_301 = 301;  // Failed to process json data
+
+  // Destination service: error level
+
+  FL_500 = 500;  // Destination service exception
+  FL_501 = 501;  // Destination resource doesn't exist
+  FL_502 = 502;  // Destination resource forbidden
+  FL_503 = 503;  // Insufficient destination resources
+
+  // Client: warn level
+
+  FL_700 = 700;  // Message doesn't meet the destination requirements
+
+  // Flow service: error level
+
+  FL_900 = 900;  // Flow interval error
+}
+
+enum LogDetailKey {
+  // Previously defined
+
+  device_key = 0;
+  client_id = 1;
+  topic = 14;
+
+  // Unique for flow, begin from 1000
+
+  rule_id = 1000; // rulechain id
+  error_message = 1001;
+  message = 1002;  // message string, may be truncated end with _TRUNCATED
+  destination_type = 1003;
+  destination_resource = 1004;
+}

@@ -18,5 +18,7 @@ enum LogCode {
     // WARN LEVEL
     DST004  = 3; // Target inbox is full, please consume pending messages
     DST005  = 4; // Drop message due to rate limit exceeded
+    DST006  = 5; // Dist message succeed with partial destinations failed
+    DST007  = 6; // Internal error when dist to some destination
 
 }
