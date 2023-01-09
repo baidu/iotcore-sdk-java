@@ -23,11 +23,19 @@ enum LogCode {
     MQT111  = 11;    // Will retain flag not supported
     MQT112  = 12;    // Retain flag not supported
     MQT113  = 13;    // Bad mqtt packet
+    MQT114  = 14;    // Failed to put retain message, please try again
+    MQT115  = 15;    // Failed to delete retain message, please try again
+    MQT116  = 16;    // Unauthorized connection
 
     MQT120  = 20;    // Protocol Violation
     MQT121  = 21;    // Protocol Violation: no more connect message allowed
     MQT122  = 22;    // Protocol Violation: empty topic list
     MQT123  = 23;    // Protocol Violation: qos 0 message dup should be 0
+
+    MQT130 = 30;     // Retain Service is not allowed for the user
+    MQT131 = 31;     // Failed to get retain messages
+
+    MQT141  = 141;   // Connection count exceed limit
 
 
     // WARNING LEVEL
@@ -35,10 +43,14 @@ enum LogCode {
     MQT202  = 202;   // QPS exceeded! Please throttle your publishing speed on current connection
     MQT203  = 203;   // Failed to decode MQTT message! Please check your message
     MQT204  = 204;   // Message dropped due to server didn't receive ack of this message for a long time! Please
-                     // confirm that the receiving client is online and send ack for qos1 message with corresponding
-                     // packet id timely
+    // confirm that the receiving client is online and send ack for qos1 message with corresponding
+    // packet id timely
     MQT205  = 205;   // Unexpected message dropped
-
+    MQT206  = 206;   // Too many topics to be matched for retain service
+    MQT207  = 207;   // Too many subscribed topics in this session
+    MQT208  = 208;   // SUB or UNSUB QPS exceeded! Please throttle your SUB or UNSUB speed on current connection
+    MQT209  = 209;   // Put retain messages stream overflow
+    MQT210  = 210;   // Get retain messages stream overflow
 
     // INFO LEVEL
     MQT301  = 301;   // Connect successfully
@@ -74,6 +86,7 @@ enum LogDetailKey {
     topic = 14;            // topic in pub message
     topic_filters = 15;    // topic filters in sub & unsub
     topic_filters_qos = 16;    // topic filters qos in sub & unsub
+    retain_flag = 17;               // retain log key
 
     // DEBUG
     size = 101;       // message payload size

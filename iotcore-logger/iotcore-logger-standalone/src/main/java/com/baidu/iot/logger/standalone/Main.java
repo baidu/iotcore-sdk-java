@@ -110,6 +110,9 @@ public class Main {
             if (logEntry.getCode().startsWith("MQT")) {
                 function = i -> LogDetailKey.forNumber(i) != null
                         ? LogDetailKey.forNumber(i).name() : String.valueOf(i);
+            } else if (logEntry.getCode().startsWith("FL")){
+                function = i -> com.baidu.iot.type.flow.constants.LogDetailKey.forNumber(i) != null
+                    ? LogDetailKey.forNumber(i).name() : String.valueOf(i);
             } else {
                 function = String::valueOf;
             }
