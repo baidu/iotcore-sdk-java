@@ -3,6 +3,7 @@
 
 package com.baidu.iot.logger.standalone;
 
+import com.baidu.iot.type.flow.constants.EntryDetailKey;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.observers.DisposableObserver;
 
@@ -111,8 +112,8 @@ public class Main {
                 function = i -> LogDetailKey.forNumber(i) != null
                         ? LogDetailKey.forNumber(i).name() : String.valueOf(i);
             } else if (logEntry.getCode().startsWith("FL")){
-                function = i -> com.baidu.iot.type.flow.constants.LogDetailKey.forNumber(i) != null
-                    ? LogDetailKey.forNumber(i).name() : String.valueOf(i);
+                function = i -> EntryDetailKey.forNumber(i) != null
+                    ? EntryDetailKey.forNumber(i).name() : String.valueOf(i);
             } else {
                 function = String::valueOf;
             }

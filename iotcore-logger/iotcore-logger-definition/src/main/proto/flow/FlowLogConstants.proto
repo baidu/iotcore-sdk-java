@@ -33,7 +33,7 @@ enum LogCode {
   FL_900 = 900;  // Flow interval error
 }
 
-enum LogDetailKey {
+enum EntryDetailKey {
   // Previously defined
 
   device_key = 0;
