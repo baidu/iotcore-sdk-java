@@ -16,7 +16,7 @@ IoTCore Device Avatar SDK for Java，包含：
 <dependency>
   <groupId>com.baidu.iot</groupId>
   <artifactId>iotcore-device-avatar-deviceside</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 ### 初始化

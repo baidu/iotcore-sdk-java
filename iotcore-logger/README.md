@@ -11,7 +11,7 @@
 <dependency>
   <groupId>com.baidu.iot</groupId>
   <artifactId>iotcore-log-sdk</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 ### 初始化IotCoreLogger

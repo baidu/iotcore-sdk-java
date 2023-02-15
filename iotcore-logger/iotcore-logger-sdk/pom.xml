@@ -8,12 +8,12 @@
     <parent>
         <groupId>com.baidu.iot</groupId>
         <artifactId>iotcore-logger</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>iotcore-logger-sdk</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <dependencies>
         <dependency>
