@@ -6,7 +6,7 @@
 
     <groupId>com.baidu.iot</groupId>
     <artifactId>iotcore-sdk-java</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
     <name>iotcore-sdk-java</name>
     <description>Java SDK for baidu IoT Core service</description>
@@ -40,10 +40,10 @@
 
     <properties>
         <!-- sub module version -->
-        <iotcore-divice-avatar.version>1.0.3</iotcore-divice-avatar.version>
-        <iotcore-file-delivery.version>1.0.0</iotcore-file-delivery.version>
-        <iotcore-logger.version>1.0.3</iotcore-logger.version>
-        <iotcore-mqtt-common.version>1.0.3</iotcore-mqtt-common.version>
+        <iotcore-divice-avatar.version>1.0.4</iotcore-divice-avatar.version>
+        <iotcore-file-delivery.version>1.0.4</iotcore-file-delivery.version>
+        <iotcore-logger.version>1.0.4</iotcore-logger.version>
+        <iotcore-mqtt-common.version>1.0.4</iotcore-mqtt-common.version>
 
         <!-- third party dependencies version -->
         <jmockit.version>1.48</jmockit.version>
